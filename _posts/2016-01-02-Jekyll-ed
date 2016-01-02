@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 Can't control my itchy hands and finally dived into setting up Jekyll (Github Pages) for this blog. It took me some time I admit - first time trying Ruby and all the commands via terminal. I'm aware of the easiest way that is via Jekyll-Now. But learning the manual way has its own advantages. 
 
-By manual I mean setting up the environment and testing the server via command line. Hit a number of road blocks along the way but in hindsight isn't really complicated if you have the right environment and references to guide along.
+By manual I mean setting up the environment and testing the server via command line. Hit a number of road blocks but in hindsight isn't really complicated if you have the right references to guide along.
 
 I'm a Win user by MBP dual boot but setting up Jekyll is an exception. So on OSX here're some good references/pointers for first-timers:
 
