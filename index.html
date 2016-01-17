@@ -2,22 +2,25 @@
 layout: default
 ---
 
-<div class="home">
+  <main role="main">
+    <article class="post">
+      <header class="post--header wrap__narrow">
+        <div class="post--meta">
+          {% assign post = site.posts.first %}
+          <div class="post--date-container">
+            <div class="h-line">
+              <span class="post--date small-heading">{{ post.date | date: "%-d %B %Y" }}</span>
+            </div>
+            <div class="v-line"></div>
+          </div>
 
-  <h1 class="page-heading">Posts</h1>
+          <span class="post--category">{{ post.categories.first }}</span>
+        </div>
+        <h1 class="post--title">{{ post.title }}</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+      </header>
+      <div class="post--body">
+        {{ post.content }}
+      </div>
+    </article>
+  </main>

@@ -1,0 +1,272 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//Vars
+
+$dark-grey: #4A4A4A;
+$light-grey: #6F6F6F;
+$medium-light-grey: #C3C3C3;
+$ultra-light-grey: #f9f9f9;
+$cyan: #00D1C9;
+$white: #fff;
+
+$color-accent: $cyan;
+$color-primary-text: $dark-grey;
+$color-secondary-text: $light-grey;
+$color-main-bg: $white;
+
+$font-sans: 'Open Sans', sans-serif;
+$font-serifs: Alegreya, serif;
+
+$width_narrow: 620px;
+$width_wide: 960px;
+
+a {
+	text-decoration: none;
+	transition: all 100ms linear;
+	color: darken($color-accent, 10%);
+}
+
+a:hover {
+	color: $color-accent;
+	box-shadow: 0 2px 0 $color-accent;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+h1.logo a {
+	font-family: $font-serifs;
+	font-weight: 900;
+	font-size: 18px;
+  border: 1px solid $cyan;
+	padding: 10px;
+	display: block;
+	float: left;
+	color: $dark-grey;
+	letter-spacing: 1px;
+}
+
+body {
+	font-family: $font-sans;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+.main-header {
+	padding: 10px 0 10px 0;
+	background-color: $ultra-light-grey;
+	overflow: hidden;
+}
+
+@mixin center() {
+	margin: 0 auto;
+}
+
+%wrap {
+	@include center();
+}
+
+
+.wrap {
+	&__narrow {
+		@extend %wrap;
+		width: $width_narrow;
+	}
+
+	&__wide {
+		@extend %wrap;
+		width: $width_wide;
+	}
+
+}
+
+.site-description {
+	font-family: $font-serifs;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 14px;
+	color: $light-grey;
+	margin: 10px 0 0 20px;
+	display: inline-block;
+}
+
+
+.post {
+	&--header {
+
+	}
+	&--meta {
+
+	}
+	&--title {
+		font-family: $font-sans;
+		font-size: 36px;
+		font-weight: 300;
+		color: $color-primary-text;
+		margin-top: 30px;
+	}
+
+	&--category {
+		letter-spacing: 2px;
+		font-size: 11px;
+		color: $color-secondary-text;
+	}
+	&--date-container {
+		text-align: center;
+		margin: 50px 0;
+	}
+	&--date {
+
+	}
+	&--body {
+		margin: 40px 0 0 0;
+	}
+	&--body p {
+		width: $width_narrow;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	&--code {
+
+	}
+}
+
+.small-heading {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: $color-secondary-text;
+	width: 80%;
+	font-size: 12px;
+	background-color: $color-main-bg;
+	margin: 0 auto;
+	margin-top: -12px;
+	display: block;
+}
+
+
+.v-line {
+	left: 2px;
+	position: relative;
+	width: 1px;
+	background-color: $medium-light-grey;
+	height: 25px;
+	margin: 0 auto;
+	box-shadow: -5px 0 0 rgba($color-accent, 0.3);
+}
+
+.h-line {
+	border-top: 1px solid $medium-light-grey;
+	width: 200px;
+	margin: 0 auto;
+	background-color: $white;
+	margin-bottom: 10px;
+}
+
+.divider {
+	border-top: 1px solid $medium-light-grey;
+	margin: 20px auto;
+	&--title {
+		text-align: center;
+		width: 100px;
+	}
+
+}
+.prev-post {
+	&--title {
+		text-align: center;
+		margin: 0 0 20px 0;
+	}
+	&--body {
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+
+.btn {
+	border: 1px solid $color-accent;
+	background-color: transparent;
+	color: $color-accent;
+	padding: 5px 20px;
+	display: inline-block;
+}
+
+.btn:hover {
+	background-color: $color-accent;
+	color: $white;
+}
+
+.highlight {
+	width: $width_narrow;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid $medium-light-grey;
+	border-radius: 2px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	box-shadow: -1px 0 2px rgba($color-accent,0.5);
+}
+
+footer {
+	border-top: 1px solid $medium-light-grey;
+	margin-top: 20px;
+	font-family: $font-serifs;
+	font-size: 12px;
+	font-style: italic;
+	color: $color-secondary-text;
+	padding: 20px 0;
+}
