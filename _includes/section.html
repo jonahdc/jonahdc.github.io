@@ -1,19 +1,30 @@
+
+
   <div class="v-line"></div>
+  {% assign post = page.previous %}
+  {% assign prev_post = site.posts[1] %}
+  {% if post %}
+  {% else %}
+    {% assign post = site.posts[1] %}
+  {% endif %}
+
+  {% if post %}
 <div class="divider">
   <span class="divider--title small-heading">Previously</span>
 </div>
 <section id="secondary">
 
+
   <article class="prev-post wrap__narrow">
     <header>
-      <h1 class="prev-post--title">In Vestibulum Urna</h1>
+      <h1 class="prev-post--title">  {{ post.title }}</h1>
       <div class="prev-post--body">
         <p>
-          Donec luctus ac nisl et blandit. Fusce elementum ultrices neque in dapibus. Vivamus hendrerit nulla eu quam ultricies, id tincidunt nulla feugiat.
-        </p>
-        <p><a href="" class="btn">Read</a>
+          {{ post.excerpt }}  </p>
+        <p><a href="  {{ post.url }}" class="btn">Read</a>
       </div>
     </header>
     <p></p>
   </article>
 </section>
+{% endif %}

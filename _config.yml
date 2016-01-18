@@ -16,3 +16,11 @@ twitter_username: jonahlogy
 github_username:  jonahlogy
 # Build settings
 markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      is_post: true
