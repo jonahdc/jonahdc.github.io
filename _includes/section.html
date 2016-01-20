@@ -1,0 +1,24 @@
+
+
+  <div class="v-line"></div>
+  {% assign post = site.posts[1] %}
+  {% if post %}
+<div class="divider">
+  <span class="divider--title small-heading">Previously</span>
+</div>
+<section id="secondary">
+
+
+  <article class="prev-post wrap__narrow">
+    <header>
+      <h1 class="prev-post--title">  {{ post.title }}</h1>
+      <div class="prev-post--body">
+        <p>
+          {{ post.excerpt }}  </p>
+        <p><a href="  {{ post.url }}" class="btn">Read</a>
+      </div>
+    </header>
+    <p></p>
+  </article>
+</section>
+{% endif %}
