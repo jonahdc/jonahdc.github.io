@@ -2,12 +2,6 @@
 
   <div class="v-line"></div>
   {% assign post = page.previous %}
-  {% assign prev_post = site.posts[1] %}
-  {% if post %}
-  {% else %}
-    {% assign post = site.posts[1] %}
-  {% endif %}
-
   {% if post %}
 <div class="divider">
   <span class="divider--title small-heading">Previously</span>
