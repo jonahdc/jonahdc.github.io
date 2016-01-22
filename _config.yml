@@ -14,8 +14,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://til.bgfsh.xyz" # the base hostname & protocol for your site
 twitter_username: jonahlogy
 github_username:  jonahlogy
+
 # Build settings
 markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 defaults:
   -

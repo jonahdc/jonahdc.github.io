@@ -79,6 +79,10 @@ a:hover {
 	box-shadow: 0 2px 0 $color-accent;
 }
 
+em {
+	font-style: italic;
+}
+
 p {
 	margin: 0 0 10px 0;
 }
@@ -172,11 +176,17 @@ body {
 	}
 	&--body {
 		margin: 40px 0 0 0;
-	}
-	&--body p {
-		width: $width_narrow;
-		margin: 0 auto;
-		margin-bottom: 20px;
+
+		p, ol {
+			width: $width_narrow;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			 list-style-type: decimal;
+		}
+
+		ol li {
+			margin-left: 40px;
+		}
 	}
 	&--code {
 
@@ -234,6 +244,8 @@ body {
 		margin: 0 auto;
 		font-size: 14px;
 		font-weight: 300;
+
+
 	}
 }
 

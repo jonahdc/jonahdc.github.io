@@ -1,12 +1,30 @@
 /**
  * Syntax highlighting styles
  */
+
+ %code-font {
+   font-family: monospace, serif;
+ }
+
+.highlighter-rouge {
+  @extend %code-font;
+}
+
 .highlight {
     background: #fff;
+
     //@extend %vertical-rhythm;
 
+
+
+    .highlighter-rouge {
+      @extend %code-font;
+      font-size: 14px;
+    }
+
     .highlighter-rouge & {
-      background: #eef;
+      background: #fefefe;
+      @extend %code-font;
     }
 
     .c     { color: #998; font-style: italic } // Comment
