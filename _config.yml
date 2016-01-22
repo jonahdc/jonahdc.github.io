@@ -18,10 +18,6 @@ github_username:  jonahlogy
 # Build settings
 markdown: kramdown
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
 defaults:
   -
     scope:
